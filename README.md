@@ -1,3 +1,7 @@
+<p align="center">
+<img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/1bf4db50-ef8c-4cc6-b77c-5c419db6ee52" />
+</p>
+
 # Holberton School - Higher Level Programming
 
 This repository contains projects and exercises from the Higher Level Programming curriculum at Holberton School. The focus is on learning advanced programming concepts and techniques using various programming languages and tools.
