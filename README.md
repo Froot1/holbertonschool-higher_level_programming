@@ -25,6 +25,6 @@ cd holbertonschool-higher_level_programming
 
 ## Author :black_nib:
 
-* __*Fahad Alonazi*__ <[Froot1](https://github.com/Froot1)>
+* __Fahad Alonazi__ <[Froot1](https://github.com/Froot1)>
 
-GitHub: [Froot1](https://github.com/Froot1)
+* GitHub: [Froot1](https://github.com/Froot1)
