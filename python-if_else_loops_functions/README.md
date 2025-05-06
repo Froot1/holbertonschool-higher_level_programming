@@ -22,7 +22,7 @@ Print the ASCII alphabet, in lowercase, not followed by a new line except 'e' an
 - [4-print_hexa.py:](https://github.com/Froot1/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/4-print_hexa.py "4-print_hexa.py")
 Print all numbers from `0` to `98` in decimal and in hexadecimal.
 
-- [5-print_comb2.py:](https://github.com/Froot1/holbertonschool-higher_level_programming/blob/masterpython-if_else_loops_functions/5-print_comb2.py "5-print_comb2.py")
+- [5-print_comb2.py:](https://github.com/Froot1/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/5-print_comb2.py "5-print_comb2.py")
 Print numbers from `0` to `99`  in ascending order with two digits.
 
 - [6-print_comb3.py:](https://github.com/Froot1/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/6-print_comb3.py "6-print_comb3.py")
