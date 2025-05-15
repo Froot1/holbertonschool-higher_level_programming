@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def matrix_mul(m_a, m_b):
     """Multiplies two matrices after validating them according to given requirements."""
     
