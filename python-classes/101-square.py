@@ -3,12 +3,7 @@
 
 
 class Square:
-    """Represent a square with size and position attributes.
-
-    Attributes:
-        size (int): The size of the square.
-        position (tuple): The position of the square.
-    """
+    """Represent a square with size and position attributes."""
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new Square.
@@ -22,11 +17,7 @@ class Square:
 
     @property
     def size(self):
-        """Get/set the current size of the square.
-
-        Returns:
-            int: The size of the square.
-        """
+        """Get/set the current size of the square."""
         return self.__size
 
     @size.setter
@@ -48,11 +39,7 @@ class Square:
 
     @property
     def position(self):
-        """Get/set the current position of the square.
-
-        Returns:
-            tuple: The position of the square.
-        """
+        """Get/set the current position of the square."""
         return self.__position
 
     @position.setter
@@ -65,26 +52,18 @@ class Square:
         Raises:
             TypeError: If position is not a tuple of 2 positive integers.
         """
-        if (not isinstance(value, tuple) or len(value) != 2 or \
-                not all(isinstance(num, int) for num in value) or \
-                not all(num >= 0 for num in value):
+        if (not isinstance(value, tuple) or len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """Return the current area of the square.
-
-        Returns:
-            int: The area of the square.
-        """
+        """Return the current area of the square."""
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square with the # character considering position.
-
-        If size is 0, prints an empty line.
-        Uses position for offsetting the square.
-        """
+        """Print the square with the # character considering position."""
         if self.__size == 0:
             print()
             return
@@ -94,16 +73,13 @@ class Square:
             print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
-        """Define the string representation of the Square.
-
-        Returns:
-            str: The string representation matching my_print() output.
-        """
-        result = []
+        """Define the string representation of the Square (same as my_print())."""
         if self.__size == 0:
             return ""
+        
+        lines = []
         for _ in range(self.__position[1]):
-            result.append("")
+            lines.append("")
         for _ in range(self.__size):
-            result.append(" " * self.__position[0] + "#" * self.__size)
-        return "\n".join(result)
+            lines.append(" " * self.__position[0] + "#" * self.__size)
+        return "\n".join(lines)
