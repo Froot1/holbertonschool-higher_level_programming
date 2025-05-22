@@ -1,85 +1,142 @@
 #!/usr/bin/python3
-"""Define a class Square with size and position attributes."""
+"""Square generation module for Python project 6-square.py
+"""
 
 
 class Square:
-    """Represent a square with size and position attributes."""
+    """Class defined for square generation.
+
+    Args:
+        size (int): length of one side of square
+        position (tuple) ((int), (int)): horizontal offset in spaces,
+        vertical offset in newlines
+
+
+    Attributes:
+        __size (int): length of one side of square
+        __position (tuple) ((int), (int)): horizontal offset in spaces,
+        vertical offset in newlines
+
+    """
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new Square.
-
-        Args:
-            size (int): The size of the new square.
-            position (tuple): The position of the new square.
-        """
+        # attribute assigment here engages setters defined below
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get/set the current size of the square."""
+        """__size getter, setter with same method name
+
+        Returns:
+            __size (int): length of one side, squared
+
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the size of the square.
+        """Args:
+            value (int): length of one side of square
 
-        Args:
-            value (int): The size of the square.
+        Attributes:
+            __size (int): length of one side of square
 
         Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
+            TypeError: if value is not an integer
+            ValueError: if value is less than 0
+
         """
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         self.__size = value
 
     @property
     def position(self):
-        """Get/set the current position of the square."""
+        """__position getter, setter with same method name
+
+        Returns:
+            __position (tuple) ((int), (int)): horizontal offset in spaces,
+            vertical offset in newlines
+
+        """
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Set the position of the square.
+        """Args:
+            value (tuple): tuple of two positive integers
 
-        Args:
-            value (tuple): The position of the square.
+        Attributes:
+            __position (tuple) ((int), (int)): horizontal offset in spaces,
+            vertical offset in newlines
 
         Raises:
-            TypeError: If position is not a tuple of 2 positive integers.
+            TypeError: if value is not a tuple of two positive ints
+
         """
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(num, int) for num in value) or
-                not all(num >= 0 for num in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value) is not tuple:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if len(value) is not 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        for num in value:
+            if type(num) is not int or num < 0:
+                raise TypeError('position must be a tuple of ' +
+                                '2 positive integers')
         self.__position = value
 
     def area(self):
-        """Return the current area of the square."""
-        return self.__size ** 2
+        """Calulates area of square.
+
+        Attributes:
+            __size (int): length of one side of square
+
+        Returns:
+            area (int): length of one side, squared
+
+        """
+        area = self.__size * self.__size
+        return area
+
+    def str_format(self):
+        """formats text representation of square in hash chars,
+        horizontally and vertically offset by first and second int
+        in __position, respectively.
+
+        Attributes:
+            __size (int): length of one side of square
+            __position (tuple) ((int), (int)): horizontal offset in spaces,
+            vertical offset in newlines
+
+        """
+        str = ''
+        if self.__size is 0:
+            str += '\n'
+        else:
+            for v_offset in range(0, self.__position[1]):
+                str += '\n'
+            for row in range(0, self.__size):
+                for h_offset in range(0, self.__position[0]):
+                    str += ' '
+                for col in range(0, self.__size):
+                    str += '#'
+                str += '\n'
+        return str
 
     def my_print(self):
-        """Print the square with the # character considering position."""
-        if self.__size == 0:
-            print()
-            return
-        for _ in range(self.__position[1]):
-            print()
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        """Prints text representation of square in hash chars,
+        horizontally and vertically offset by first and second int
+        in __position, respectively.
+
+        """
+        print(self.str_format(), end="")
 
     def __str__(self):
-        """Define the string representation of the Square (same as my_print())."""
-        if self.__size == 0:
-            return ""
-        
-        lines = []
-        for _ in range(self.__position[1]):
-            lines.append("")
-        for _ in range(self.__size):
-            lines.append(" " * self.__position[0] + "#" * self.__size)
-        return "\n".join(lines)
+        """Returns: self.str_format() minus trailing newline
+
+        """
+        length = len(self.str_format())
+        truncated = self.str_format()[:length - 1]
+        return truncated
