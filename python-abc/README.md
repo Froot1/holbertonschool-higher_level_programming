@@ -8,10 +8,8 @@ Project done during **Full Stack Software Engineering studies** at **Holberton S
 ## Files
 | Filename | Description |
 | -------- | ----------- |
-| `task_00_abc.py` |  Create a subclass named `Dog` that inherits from the `Animal` class.
-	- Implement the `sound` method in the `Dog` class to return the string "Bark".
-	Create a subclass named `Cat` that also inherits from the `Animal` class.
-	- Implement the `sound` method in the `Cat` class to return the string "Meow".|
+| `task_00_abc.py` |  Create a subclass named `Dog` that inherits from the `Animal` class.-Implement the `sound` method in the `Dog` class to return the string "Bark".-Create a subclass named `Cat` that also inherits from the `Animal` class.
+Implement the `sound` method in the `Cat` class to return the string "Meow".|
 | `task_01_duck_typing.py` | Class `Circle` that inhertis from `Shape` |
 | `task_02_verboselist.py` | Class `VerboseList` that inherits from the built-in `list` class. |
 | `task_03_countediterator.py` | Class named `CountedIterator` that extends the built-in iterator obtained from the `iter` function |
