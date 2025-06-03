@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-'''Module for Student class.'''
+"""student class module"""
 
 
 class Student:
-    '''Class for jsonification.'''
+    """a class we shall json"""
     def __init__(self, first_name, last_name, age):
-        '''Constructor.'''
+        """init method"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        '''Retrieves dictionary with filter.'''
-        if type(attrs) is list and all([type(x) == str for x in attrs]):
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        """get dict, names if only string"""
+        if type(attrs) is list and all([type(a) == str for a in attrs]):
+            return {name: value for name, value in self.__dict__.items()
+                    if name in attrs}
         else:
             return self.__dict__.copy()
