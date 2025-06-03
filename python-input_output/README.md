@@ -45,7 +45,7 @@ What you should learn from this project:
 
 
 ### [6. Create object from a JSON file](./6-load_from_json_file.py)
-* Write a function that creates an Object from a JSON fil
+* Write a function that creates an Object from a JSON file:
 
 
 ### [7. Load, add, save](./7-add_item.py)
