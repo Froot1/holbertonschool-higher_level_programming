@@ -12,7 +12,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get dict representation, filter by names if only string attributes."""
+        """"Retrieves dictionary with filter"""
         if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
             return {name: value for name, value in self.__dict__.items()
                     if name in attrs}
