@@ -22,4 +22,3 @@ class Student:
         """Load attributes from json ."""
         for key, value in json.items():
             setattr(self, key, value)
-
