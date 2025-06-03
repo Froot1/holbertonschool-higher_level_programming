@@ -69,7 +69,7 @@ What you should learn from this project:
 
 
 ### [12. Pascal's Triangle](./12-pascal_triangle.py)
-* Technical interview preparation:
+* Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascals triangle of n:
 
 
 ### [13. Search and update](./100-append_after.py)
