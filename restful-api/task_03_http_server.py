@@ -37,7 +37,9 @@ class HTTPHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write("OK".encode('utf-8'))
 
         elif self.path == '/info':
-            self._set_headers(content_type='application/json')
+            self.send_response(200)
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
             data = {
                 "version": "1.0",
                 "description": "A simple API built with http.server"
