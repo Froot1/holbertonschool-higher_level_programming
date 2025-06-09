@@ -1,63 +1,49 @@
-#!/usr/bin/python3
-"""Module to implement http.server module"""
-import http.server
+#!/usr/bin/env python3
 import json
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
-
-class HTTPHandler(http.server.BaseHTTPRequestHandler):
-    """Simple Handler class inherited from BaseHTTPRequestHandler"""
+class SimpleAPIHandler(BaseHTTPRequestHandler):
+    def _send_response(self, status_code=200, content_type="text/plain", body=""):
+        self.send_response(status_code)
+        self.send_header("Content-Type", content_type)
+        self.end_headers()
+        if isinstance(body, str):
+            self.wfile.write(body.encode("utf-8"))
+        else:
+            self.wfile.write(body)
 
     def do_GET(self):
-        """Method to handle GET requests"""
+        if self.path == "/":
+            self._send_response(200, "text/plain", "Hello, this is a simple API!")
 
-        # Base case
-        if self.path == '/':
-            self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write('Hello, this is a simple API!'.encode())
-
-        # If /data is accessed
-        elif self.path == '/data':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
+        elif self.path == "/data":
             data = {
                 "name": "John",
                 "age": 30,
                 "city": "New York"
             }
-            self.wfile.write(json.dumps(data).encode('utf-8'))
+            json_data = json.dumps(data)
+            self._send_response(200, "application/json", json_data)
 
-        # /status endpoint
-        elif self.path == '/status':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            data = {"status": "OK"}
-            self.wfile.write(json.dumps(data).encode('utf-8'))
+        elif self.path == "/status":
+            self._send_response(200, "text/plain", "OK")
 
-        elif self.path == '/info':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            data = {
+        elif self.path == "/info":
+            info = {
                 "version": "1.0",
                 "description": "A simple API built with http.server"
             }
-            self.wfile.write(json.dumps(data).encode('utf-8'))
+            json_info = json.dumps(info)
+            self._send_response(200, "application/json", json_info)
 
-        # Error 404
         else:
-            self.send_response(404)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            data = {"error": "Endpoint not found"}
-            self.wfile.write(json.dumps(data).encode('utf-8'))
+            self._send_response(404, "text/plain", "Endpoint not found")
 
+def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Starting server on http://localhost:{port}")
+    httpd.serve_forever()
 
-if __name__ == '__main__':
-    """Server initialization"""
-    server_address = ('', 8000)
-    httpserver = http.server.HTTPServer(server_address, HTTPHandler)
-    httpserver.serve_forever()
+if __name__ == "__main__":
+    run()
