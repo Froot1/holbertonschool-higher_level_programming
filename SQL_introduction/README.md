@@ -19,7 +19,8 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
 ```
 
 * Tasks 101-103 query from the database [temperatures.sql](./temperatures.sql).
-To import table into DB
+
+To import Table into DB
 ```
 $ mysql -u <username> -p <DB NAME> < <dump file path>
 ```
