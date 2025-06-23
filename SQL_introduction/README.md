@@ -19,6 +19,13 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
 ```
 
 * Tasks 101-103 query from the database [temperatures.sql](./temperatures.sql).
+```
+$ mysql -u <username> -p <DB NAME> < <dump file path>
+```
+For Example:
+```
+mysql -u root -p hbtn_0c_0 < ~/holbertonschool-higher_level_programming/SQL_introduction/temperatures.sql
+```
 
 ## Tasks :clipboard:
 
@@ -55,7 +62,7 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
   `first_table`.
   * Description:
     * `id` = `89`
-    * `name` = `Holberton School`
+    * `name` = `Best School`
 
 * **:eight:. Count 89**
   * [8-count_89.sql](./8-count_89.sql): MySQL script that displays the number records with `id =
