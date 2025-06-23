@@ -1,3 +1,8 @@
+<p align="center">
+<img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/01c00a07-e997-4317-a4de-d63987ffc01b" />
+</p>
+
+
 # SQL - Introduction
 
 This was my first project in which I began to work with SQL and relational
