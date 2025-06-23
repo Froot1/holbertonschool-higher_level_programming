@@ -42,7 +42,7 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
     * `id`: INT
     * `name`: VARCHAR(256)
 
-* **:Five:. Full description**
+* **:five:. Full description**
   * [5-full_table.sql](./5-full_table.sql): MySQL script that prints the full description of the
   table `first_table`.
 
