@@ -83,7 +83,7 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
   * [11-best_score.sql](./11-best_score.sql): MySQL script that lists the `score` and `name` of all
   records with a `score >= 10` in the table `second_table` in order of descending score.
 
-* **:one::tow:. Cheating is bad**
+* **:one::two:. Cheating is bad**
   * [12-no_cheating.sql](./12-no_cheating.sql): MySQL script that updates the score of Bob to 10
   the table `second_table`.
 
