@@ -75,48 +75,48 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
     * `id` = 3, `name` = "Bob", `score` = 14
     * `id` = 4, `name` = "George", `score` = 8
 
-* **:Ten:. List by best**
+* **:one::zero:. List by best**
   * [10-top_score.sql](./10-top_score.sql): MySQL script that lists the `score` and `name` of all
   records of the table `second_table` in order of descending `score`.
 
-* **:eleven:. Select the best**
+* **:one::one:. Select the best**
   * [11-best_score.sql](./11-best_score.sql): MySQL script that lists the `score` and `name` of all
   records with a `score >= 10` in the table `second_table` in order of descending score.
 
-* **:twelve:. Cheating is bad**
+* **:one::tow:. Cheating is bad**
   * [12-no_cheating.sql](./12-no_cheating.sql): MySQL script that updates the score of Bob to 10
   the table `second_table`.
 
-* **:thirteen:. Score too low**
+* **:one::three:. Score too low**
   * [13-change_class.sql](./13-change_class.sql): MySQL script that removes all records with a
   `score <= 5` in the table `second_table`.
 
-* **:fourteen:. Average**
+* **:one::four:. Average**
   * [14-average.sql](./14-average.sql): MySQL script that computes the average `score` of all
   records in the table `second_table`.
 
-* **:fifteen:. Number by score**
+* **:one::five:. Number by score**
   * [15-groups.sql](./15-groups.sql): MySQL script that lists the `score` and number of records
   with the same score in the table `second_table` in order of descending count.
 
-* **:sixteen:. Say my name**
+* **:one::six:. Say my name**
   * [16-no_link.sql](./16-no_link.sql): MySQL script that lists the `score` and `name` of all
   records in the table `second_table` in order of descending `score`.
   * Does not display rows without a `name` value.
 
-* **:seventeen:. Go to UTF8**
+* **:one::seven:. Go to UTF8**
   * [100-move_to_utf8.sql](./100-move_to_utf8.sql): MySQL script that converts the `hbtn_0c_0`
   database to UTF8.
 
-* **:eighteen:. Temperatures #0**
+* **:one::eight:. Temperatures #0**
   * [101-avg_temperatures.sql](./101-avg_temperatures.sql): MySQL script that displays the average
   temperature (Fahrenheit) by city in descending order.
 
-* **:nineteen:. Temperatures #1**
+* **:one::nine:. Temperatures #1**
   * [102-top_city.sql](./102-top_city.sql): MySQL script that displays the three cities with the
   highest average temperature from July to August in descending order.
 
-* **:twenty:. Temperature #2**
+* **:two::zero:. Temperature #2**
   * [103-max_state.sql](./103-max_state.sql): MySQL script that displays the max temperature of each
   state in order of state name.
 ## :black_nib: Authors
