@@ -63,6 +63,7 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
 
 * **:nine:. Full creation**
   * [9-full_creation.sql](./9-full_creation.sql): MySQL script that creates and fills a table
+
   `second_table`.
   * Description:
     * `id`: INT
@@ -74,7 +75,7 @@ $ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
     * `id` = 3, `name` = "Bob", `score` = 14
     * `id` = 4, `name` = "George", `score` = 8
 
-* **:ten:. List by best**
+* **:Ten:. List by best**
   * [10-top_score.sql](./10-top_score.sql): MySQL script that lists the `score` and `name` of all
   records of the table `second_table` in order of descending `score`.
 
