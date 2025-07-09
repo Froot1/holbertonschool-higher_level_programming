@@ -6,10 +6,10 @@
 ### This directory is for learning Javascript. Below is a description of the files contained in this directory.
 
 #### [0-javascript_is_amazing.js](./0-javascript_is_amazing.js)
-* JS script that prints “Javascript is amazing”.
+* JS script that prints “JavScript is amazing”.
 
 #### [1-multi_languages.js](./1-multi_languages.js)
-* JS script that that prints 3 lines: “C is fun”, “Python is cool”, and “Javascript is amazing”
+* JS script that that prints 3 lines: “C is fun”, “Python is cool”,  JavaScript is amazing”
 
 #### [2-arguments.js](./2-arguments.js)
 * JS script that prints a message depending of the number of arguments passed.
