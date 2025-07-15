@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error:', error));
     } else {
-      helloDiv.textContent = '';
+      helloDiv.textContent = 'Please select a language';
     }
   });
 });
