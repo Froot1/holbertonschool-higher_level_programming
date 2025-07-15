@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Holberton School</title>
-    <script type="text/javascript" src="100-script.js"></script>
-  </head>
-  <body>
-    <header> 
-      First HTML page
-    </header>
-    <br />
-    <div id="add_item">Add item</div>
-    <div id="remove_item">Remove item</div>
-    <div id="clear_list">Clear list</div>
-    <br />
-    <ul class="my_list">
-      <li>Item</li>
-    </ul>
-    <footer>
-      Holberton School - 2022
-    </footer>
-  </body>
-</html>
+document.addEventListener('DOMContentLoaded', function() {
+    const addItemButton = document.getElementById('add_item');
+    const removeItemButton = document.getElementById('remove_item');
+    const clearListButton = document.getElementById('clear_list');
+    const list = document.querySelector('.my_list');
+  
+    addItemButton.addEventListener('click', function() {
+      const newItem = document.createElement('li');
+      newItem.textContent = 'Item';
+      list.appendChild(newItem);
+    });
+  
+    removeItemButton.addEventListener('click', function() {
+      if (list.lastChild) {
+        list.removeChild(list.lastChild);
+      }
+    });
+  
+    clearListButton.addEventListener('click', function() {
+      while (list.firstChild) {
+        list.removeChild(list.firstChild);
+      }
+    });
+  }); 
