@@ -135,7 +135,7 @@ Write a JavaScript script that fetches and prints how to say “Hello” dependi
 - You should use this API service: `https://hellosalut.stefanbohacek.dev/`
 - The language code will be the value selected in the combo box with id `language_code` (es, fr, en etc.)
 - The translation must be fetched when the user clicks on element with id `btn_translate`
-- The translation of “Hello” must be displayed in the HTML tag with i`d hel`
+- The translation of “Hello” must be displayed in the HTML tag withd `hello`
 
 - You script must work when imported from the `<head>` tag
 - Test with the provided HTML file.
