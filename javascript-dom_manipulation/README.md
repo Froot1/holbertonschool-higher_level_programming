@@ -116,6 +116,29 @@ Write a JavaScript script that fetches from [https://hellosalut.stefanbohacek.de
 - Your script must work when it is imported from the `<head>` tag.
 - Test with the provided HTML file.
 
+### 9. List, add, remove
+**File:** [`100-script.js`](./100-script.js)
+
+Write a JavaScript script that adds, removes and clears`li` elements from a list when the user clicks:
+
+- The new element must be:`<li>Item</li>`
+- The new element must be added to the element with id `my_list`
+- When the user clicks on the element with id `add_item`: a new element is added to the list
+- When the user clicks on the element with id `remove_item`: the last element is removed from the list
+- When the user clicks on the element with id `clear_list`: all elements of the list are removed You script must work when it imported from the `head` tag Please test with this HTML file in your browser
+
+### 10. Say hello to everybody!
+**File:** [`101-script.js`](./101-script.js)
+
+Write a JavaScript script that fetches and prints how to say “Hello” depending on the language
+
+- You should use this API service: `https://hellosalut.stefanbohacek.dev/`
+- The language code will be the value selected in the combo box with id `language_code` (es, fr, en etc.)
+- The translation must be fetched when the user clicks on element with id `btn_translate`
+- The translation of “Hello” must be displayed in the HTML tag with i`hello`
+- You script must work when imported from the `<head>` tag
+- Test with the provided HTML file.
+
 ## Author :black_nib:
 
 * __Fahad Alonazi__ <[Froot1](https://github.com/Froot1)>
